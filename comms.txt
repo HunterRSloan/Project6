@@ -1,0 +1,40 @@
+Monitor: Restarting Publisher 1.
+Monitor: Restarting Publisher 2.
+Monitor: Restarting Publisher 3.
+Monitor: Restarting Publisher 4.
+Monitor: Restarting Publisher 5.
+Monitor: Restarting Publisher 6.
+
+Publisher 1: Sent [1,6] to broker.
+Publisher 2: Sent [2,4] to broker.
+Publisher 3: Sent [3,7] to broker.
+Publisher 4: Sent [4,2] to broker.
+Publisher 5: Sent [5,8] to broker.
+Publisher 1: Sent [1,3] to broker.
+Publisher 6: Sent [6,5] to broker.
+
+Broker: Received message [1,6].
+Broker: Received message [2,4].
+Broker: Received message [3,7].
+Broker: Received message [4,2].
+Broker: Received message [5,8].
+Broker: Received message [6,5].
+Broker: Sending message [6,4,7,2,8,5] to consumer.
+
+Consumer: Received message [6,4,7,2,8,5] sum 32
+Consumer: Generated value [3,1,7,9,2,2] sum 24
+
+Publisher 1: Ending process (for value 11).
+
+Monitor: Restarting Publisher 1.
+
+Publisher 1: Sent [1,10] to broker.
+...
+
+(After processing 100 messages)
+
+Consumer: Mean and SD of received data: 24.678 4.237
+Consumer: Mean and SD of generated data: 23.954 3.965
+Consumer: Process ended.
+
+Broker: Ending monitor, all publishers, and self.
